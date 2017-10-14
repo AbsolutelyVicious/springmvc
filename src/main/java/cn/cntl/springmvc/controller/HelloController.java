@@ -26,4 +26,15 @@ public class HelloController implements Controller {
 		return mv;
 	}
 
+	/* (non-Javadoc)
+	 * 处理具体的业务逻辑
+	 */
+	public ModelAndView handleRequestX(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		ModelAndView mv = new ModelAndView();
+
+		mv.setViewName("hello");
+		mv.addObject("msg", "springmvc的第一个入门程序");
+		return mv;
+	}
+
 }
